@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        
+        <!-- Resume Form -->
+        <form id="resumeForm">
+            <section>
+                <h2>Personal Information</h2>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" placeholder="Your Full Name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" placeholder="Your Address"></textarea>
+            </section>
+
+            <section>
+                <h2>Career Objective</h2>
+                <textarea id="careerObjective" placeholder="Write your career objective"></textarea>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <label for="degree">Degree:</label>
+                <input type="text" id="degree" placeholder="Degree or Certification" required>
+                
+                <label for="institution">Institution:</label>
+                <input type="text" id="institution" placeholder="Institution Name" required>
+                
+                <label for="yearOfCompletion">Year of Completion:</label>
+                <input type="number" id="yearOfCompletion" placeholder="Year" required>
+                
+                <label for="grade">Grade/Percentage:</label>
+                <input type="text" id="grade" placeholder="Grade or Percentage" required>
+            </section>
+
+            <section>
+                <h2>Work Experience</h2>
+                <label for="jobTitle">Job Title:</label>
+                <input type="text" id="jobTitle" placeholder="Your Job Title">
+                
+                <label for="company">Company Name:</label>
+                <input type="text" id="company" placeholder="Company Name">
+                
+                <label for="duration">Duration:</label>
+                <input type="text" id="duration" placeholder="Duration (e.g., Jan 2020 - Present)">
+                
+                <label for="jobDescription">Job Description:</label>
+                <textarea id="jobDescription" placeholder="Describe your role and achievements"></textarea>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <input type="text" id="skills" placeholder="Comma separated skills" required>
+            </section>
+
+            <section>
+                <h2>Additional Information</h2>
+                <label for="hobbies">Hobbies (Optional):</label>
+                <textarea id="hobbies" placeholder="Your hobbies or personal interests"></textarea>
+                
+                <label for="languages">Languages (Optional):</label>
+                <textarea id="languages" placeholder="Languages you speak"></textarea>
+            </section>
+
+            <button type="submit">Create Resume</button>
+            <button type="button" onclick="clearForm()">Clear Form</button>
+        </form>
+
+        <div id="resumeOutput" style="display:none;">
+            <h2>Generated Resume</h2>
+            <div id="resumeContent"></div>
+            <button onclick="window.print()">Print Resume</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
